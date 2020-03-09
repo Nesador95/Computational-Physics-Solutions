@@ -72,7 +72,7 @@ This folder contains resources and datasets provided by the author to use in som
 
 ## Acknowledgments 
 
-I would like to thank [Dr. Ethan Deneault](https://www.ut.edu/directory/deneault-ethan) Associate Professor of Physics Department of Physics University of Tampa for mentoring, instructing, advising, and inspiring me as an undergraduate physics student, I would also like to thank him for introducing me to computational physics and computational modeling and for allowing me to be part of his research team as an undergraduate research fellow.   
+I would like to thank [Dr. Ethan Deneault](https://www.ut.edu/directory/deneault-ethan) Associate Professor of Physics Department of Physics University of Tampa for mentoring, instructing, advising, and inspiring me as an undergraduate physics student; I would also like to thank him for introducing me to computational physics and computational modeling and for allowing me to be part of his research team as an undergraduate research fellow.   
 
 I would like to thank [Brandon Shar](https://www.linkedin.com/in/brandonshar/) for advising and coaching me in advanced programing techniques as well as being a career mentor. 
 
