@@ -46,7 +46,7 @@ Chapter 3 introduces methods of data visualization that include graphs, density 
 ### Chapter 4: Accuracy and speed
 Chapter 4 deals with the limitations of the computer. This chapter deals with methods to estimate accuracy of calculations and how long it would take to compute solutions depending on the amount of steps needed.
 
-### [Chapter 5: Integrals and derivatives]()
+### [Chapter 5: Integrals and derivatives](https://github.com/Nesador95/Computational-Physics-Solutions/tree/master/Chapter%205%20Integrals%20and%20derivatives)
 Chapter 5 is a first look at computational physics proper with methods for performing integrals and derivatives. The techniques covered include the trapezoidal rule, Simpson's rule and more advanced methods such as adaptive methods including Romberg integration, and Gaussian quadrature. Some of the applications the author uses for the exercises are: heat capacity of solids, thermal radiation, electrostatics calculations, and image processing. 
 
 ### Chapter 6: Solutions to linear and nonlinear equations
