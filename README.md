@@ -37,7 +37,7 @@ The original questions and other downloadable material from the book can be foun
 ### Chapter 1: Introduction
 Chapter 1 has no exercises and therefore is no feature in this project. The chapter's aim is to intorduce the reader to the underlying concepts that will be covered in the rest of the book.
 
-### [Chapter 2: Python programming for physicists]() 
+### [Chapter 2: Python programming for physicists](https://github.com/Nesador95/Computational-Physics-Solutions/tree/master/Chapter%202%20Python%20programming%20for%20physicists) 
 Chapter 2 introduces different concepts of python programing from variable assignments to user defined functions and regresion methods of calculation. Exercises in this chapter are focused on problem solving and the translation of mathematical equations and physics concepts into code. From problems that cover 2-D kinematics and altitude of satellite orbits to calculating binomial coeficients using "n choose k" with Pascal's Triangle and programing recursive solutions and calculating prime numbers.
 
 ### Chapter 3: Graphics and visualization
