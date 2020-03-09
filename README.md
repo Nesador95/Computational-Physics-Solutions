@@ -40,13 +40,13 @@ Chapter 1 has no exercises and therefore is no feature in this project. The chap
 ### [Chapter 2: Python programming for physicists](https://github.com/Nesador95/Computational-Physics-Solutions/tree/master/Chapter%202%20Python%20programming%20for%20physicists) 
 Chapter 2 introduces different concepts of python programing from variable assignments to user defined functions and regresion methods of calculation. Exercises in this chapter are focused on problem solving and the translation of mathematical equations and physics concepts into code. From problems that cover 2-D kinematics and altitude of satellite orbits to calculating binomial coeficients using "n choose k" with Pascal's Triangle and programing recursive solutions and calculating prime numbers.
 
-### Chapter 3: Graphics and visualization
+### [Chapter 3: Graphics and visualization](https://github.com/Nesador95/Computational-Physics-Solutions/tree/master/Chapter%203%20Graphics%20Visualization%20Animation)
 Chapter 3 introduces methods of data visualization that include graphs, density plots 3-D visualization and Animation.
 
 ### Chapter 4: Accuracy and speed
 Chapter 4 deals with the limitations of the computer. This chapter deals with methods to estimate accuracy of calculations and how long it would take to compute solutions depending on the amount of steps needed.
 
-### Chapter 5: Integrals and derivatives
+### [Chapter 5: Integrals and derivatives]()
 Chapter 5 is a first look at computational physics proper with methods for performing integrals and derivatives. The techniques covered include the trapezoidal rule, Simpson's rule and more advanced methods such as adaptive methods including Romberg integration, and Gaussian quadrature. Some of the applications the author uses for the exercises are: heat capacity of solids, thermal radiation, electrostatics calculations, and image processing. 
 
 ### Chapter 6: Solutions to linear and nonlinear equations
