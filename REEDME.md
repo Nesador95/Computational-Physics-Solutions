@@ -1,4 +1,5 @@
-# Solutions to All Problems in Computational Physics
+# Computational Physics Solutions
+#### Book Author Mark Newman  
 #### Solutions by Luis Felipe Llano
 
 ##### Road Map
