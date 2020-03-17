@@ -20,4 +20,4 @@ with a scale factor to account for size and orbit to aid ease of visualization. 
 ##### Exercise 3.7
 ##### Exercise 3.8
 
-###### Link to all exercise questions in this chapter can be found [here](http://www-personal.umich.edu/~mejn/cp/exercises.html)exercises.html)
+###### Link to all exercise questions in this chapter can be found [here](http://www-personal.umich.edu/~mejn/cp/exercises.html)
