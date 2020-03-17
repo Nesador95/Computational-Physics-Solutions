@@ -1,9 +1,6 @@
 # Done
 import numpy as np
-"""
-This program gives the binding energy for the corresponding atom, binding energy per nucleon,
-the value of A of the most stable nucleus and its binding energy per nucleon.
-"""
+
 # Using A and Z get binding energy of the atom
 
 def AZ_binding_energy(mass_number_A, atomic_number_Z): 

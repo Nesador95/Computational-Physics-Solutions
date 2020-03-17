@@ -1,12 +1,7 @@
 # Done
 import numpy as np
 import matplotlib.pyplot as plt
-"""
-This Exercise asks to plot three functions:
-the deltoid curve, the galilean_spiral, and Fey's function
-to accomplish this more easily building a polar plot coordinate
-converted was also asked for.
-"""
+
 # part a
 
 def deltoid_curve(theta_limit):

@@ -1,8 +1,6 @@
 # Done
 import numpy as np
 
-"""This program calculates and prints the Madelung constant for sodium chloride."""
-
 def madelung_constant(number_of_atoms, distance_between_atoms):
     e = -1.602176634e-19 # electron chanrge on coulomb
     e_0 = 8.8541878128e-12 # permittivity of the vacuum 

@@ -1,7 +1,5 @@
 # Done
 import numpy as np
-"""This is a compilation of the different array operations, as well as matrix
-   operations."""
 
 a = np.array([1,2,3,4], int)
 b = np.array([2,4,6,8], int)

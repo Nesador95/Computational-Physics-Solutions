@@ -3,11 +3,7 @@ import numpy as np
 # earts L1 = 1.4710e11 v1 = 3.0287e4
 # halley L1 = 8.7830e10 v1 = 5.4529e4
 
-'''
-This program calculates the orbit of bodies orbiting the Sun by providing the perihelion 
-and the velocity at the perihelion. (If you wish to do another body other than the sun as 
-the center of orbit, go to "velocity_aphelion" and change the mass of the star.)
-''' 
+
 
 def velocity_aphelion(perihelion, velocity_perihelion):
     star_mass = 1.9891e30

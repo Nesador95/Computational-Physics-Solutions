@@ -3,10 +3,6 @@
 import math as math
 
 def from_cartesian_to_polar(x, y):
-    """
-    This program will convert cartesian coordinates 
-    to polar coordinates
-    """ 
     x = float(x)
     y = float(y)
 

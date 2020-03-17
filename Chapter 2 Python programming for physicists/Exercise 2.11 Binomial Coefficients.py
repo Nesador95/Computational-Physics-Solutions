@@ -1,9 +1,5 @@
 # Done
 import numpy as np
-"""
-build a code to solve n choose k problems where k >= 1
-"""
-
 
 def factorial(n):
     f = 1

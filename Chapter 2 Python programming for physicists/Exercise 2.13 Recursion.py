@@ -1,8 +1,5 @@
 # Done
-"""
-In this file, we will rewrite previous programs and new programs using
-recursive methods.
-"""
+
 
 def factorial(n):
     if n == 1:

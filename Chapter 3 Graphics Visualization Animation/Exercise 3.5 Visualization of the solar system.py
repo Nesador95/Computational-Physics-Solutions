@@ -1,12 +1,4 @@
 # Done
-"""
-Animate the inner-most plannets of the solar system 
-with a scale factor to account for size and orbit in order to
-account for ease of visualization. This project does not use gravity 
-equations, the spheres have no mass and their orbits are as circular as
-the resolution allows. this projects intent is to showcase some OOD, 3-D modeling
-and animation.
-"""
 import vpython as vp
 import numpy as np
 ###############################################################################

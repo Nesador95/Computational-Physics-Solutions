@@ -1,21 +1,5 @@
 # Done
-"""
-Render a sodium chloride crystal arranged on a cubic lattice
 
-Ch_________Ch
-| \       / |
-|  \     /  |
-|   \   /   |
-|    \ /    |
-|     Na    | 
-|    /  \   |
-|   /    \  |
-|  /      \ |
-| /        \|
-Ch__________Ch
-
-for each one of the faces of the cube
-"""
 import vpython as vp
 # part a
 def sodium_chloride_lattice(lenght_of_side):

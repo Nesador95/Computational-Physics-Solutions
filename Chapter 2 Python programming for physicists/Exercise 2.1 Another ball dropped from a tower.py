@@ -1,11 +1,7 @@
 # Done
 
 def ball_drop(height):
-    """
-    this object calculates the time it takes for a ball
-    to hit the ground when dropped from a tower of height
-    in meters ignoring air resistance
-    """
+
     tower_height = float(height)
     gravity = 9.81
     

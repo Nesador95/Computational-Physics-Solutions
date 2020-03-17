@@ -1,10 +1,7 @@
 # Done
 import numpy as np
 import matplotlib.pyplot as plt
-"""
-This exersice was a simple example on how to plot experimental data
-and how to manipulate it.
-"""
+
 sun_spots_data = np.loadtxt(r"..\cpresources\sunspots.txt")
 
 x = sun_spots_data[:, 0]
