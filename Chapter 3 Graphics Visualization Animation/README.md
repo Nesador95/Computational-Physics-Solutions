@@ -1,8 +1,7 @@
 # Chapter 3: Graphics and visualization
 
 ##### Exercise 3.1
-This program was a simple example on how to plot experimental data
-and how to manipulate it.
+This program was a simple example on how to plot experimental data gathered in `sunspots.txt` and how to manipulate it.
 ##### Exercise 3.2
 This program plots three functions: the deltoid curve, the galilean_spiral, 
 and Fey's function. To accomplish this more easily, a polar plot coordinate
