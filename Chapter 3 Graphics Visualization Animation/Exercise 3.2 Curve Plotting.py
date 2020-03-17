@@ -45,6 +45,7 @@ plt.show()
 # part c
 
 def feys_function(theta_limit,theta_steps):
+    
     theta = np.linspace(0,theta_limit,theta_steps)
     r = np.exp(np.cos(theta)) - 2*np.cos(4*theta) + (np.sin(theta/12))**5
 
