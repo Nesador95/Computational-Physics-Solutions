@@ -11,19 +11,7 @@ This program plots `stm.txt` which contains a grid of values from scanning tunne
 microscope measurements of the surface of silicon. It showsthe structure of the surface
 of silicon clearly using a the heatmap method.
 ##### Exercise 3.4
-This program render a sodium chloride crystal arranged on a cubic lattice of the form:
-Ch_________Ch
-| \       / |
-|  \     /  |
-|   \   /   |
-|    \ /    |
-|     Na    | 
-|    /  \   |
-|   /    \  |
-|  /      \ |
-| /        \|
-Ch__________Ch
-using two different colors to represent the two different atoms in 3-D.
+This program render a sodium chloride crystal arranged on a cubic using two different colors to represent the two different atoms in 3-D.
 This program also builds an fcc crystal lattice. 
 ##### Exercise 3.5
 This program animates a 3-D model of the inner-most planets of the solar system 
