@@ -1,7 +1,7 @@
 # Chapter 2 Python Programming for Physicists
 
 ##### Exercise 2.1
-this program calculates the time it takes for a ball to hit the ground when dropped from a tower of the desired height in meters ignoring air resistance.
+This program calculates the time it takes for a ball to hit the ground when dropped from a tower of the desired height in meters ignoring air resistance.
 ##### Exercise 2.2
 This program calculates the distance away a satellite needs to be from the surface of the earth to complete the specified period written in seconds.
 ##### Exercise 2.3
@@ -22,7 +22,7 @@ This program gives the binding energy for the corresponding atom, the binding en
 ##### Exercise 2.10
 This program calculates and prints the Madelung constant for sodium chloride.
 ##### Exercise 2.11
-this program solves n choose k problems.
+This program solves n choose k problems.
 ##### Exercise 2.12
 This program finds prime numbers more efficiently than dividing all previous integer by the number being tested. The rules to be followed for this program are:
 
