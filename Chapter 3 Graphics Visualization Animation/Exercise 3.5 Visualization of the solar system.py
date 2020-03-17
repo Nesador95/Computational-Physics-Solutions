@@ -38,20 +38,20 @@ scene.select()
 # Rendering Stage
 ###############################################################################
 sun_radius= 10
-jupitar_radius = 5
+jupiter_radius = 5
 
 Sun = celestial_body(vp.color.yellow, sun_radius, vp.vector(0,0,0))
-Mercury = celestial_body(vp.color.orange,jupitar_radius*0.035273879,\
+Mercury = celestial_body(vp.color.orange,jupiter_radius*0.035273879,\
                          vp.vector(0,-sun_radius+(-sun_radius*0.083249461),0))
-Venus = celestial_body(vp.color.purple,jupitar_radius*0.087490784,\
+Venus = celestial_body(vp.color.purple,jupiter_radius*0.087490784,\
                        vp.vector(0,-sun_radius+(-sun_radius*0.155571531),0))
-Earth = celestial_body(vp.color.blue,jupitar_radius*0.09210241,\
+Earth = celestial_body(vp.color.blue,jupiter_radius*0.09210241,\
                        vp.vector(0,-sun_radius+(-sun_radius*0.210783609),0))
-Mars = celestial_body(vp.color.red,jupitar_radius*0.048949735,\
+Mars = celestial_body(vp.color.red,jupiter_radius*0.048949735,\
                        vp.vector(0,-sun_radius+(-sun_radius*0.32767793),0))
-Jupiter = celestial_body(vp.color.magenta,jupitar_radius,\
+Jupiter = celestial_body(vp.color.magenta,jupiter_radius,\
                        vp.vector(0,-sun_radius+(-sun_radius*1.119338605),0))
-Saturn = celestial_body(vp.color.white,jupitar_radius*0.828589189,\
+Saturn = celestial_body(vp.color.white,jupiter_radius*0.828589189,\
                        vp.vector(0,-sun_radius+(-sun_radius*2.060963336),0))
 ###############################################################################
 # Animation Stage
