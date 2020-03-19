@@ -4,7 +4,7 @@ import numpy as np
 ###############################################################################
 # Set up
 ###############################################################################
-class celestial_body:
+class CelestialBody:
     def __init__(self,color_of_body,radius_of_body, position):
         self.body = vp.sphere(color=color_of_body, \
                                 radius=radius_of_body,\
@@ -32,18 +32,18 @@ scene.select()
 sun_radius= 10
 jupiter_radius = 5
 
-Sun = celestial_body(vp.color.yellow, sun_radius, vp.vector(0,0,0))
-Mercury = celestial_body(vp.color.orange,jupiter_radius*0.035273879,\
+Sun = CelestialBody(vp.color.yellow, sun_radius, vp.vector(0,0,0))
+Mercury = CelestialBody(vp.color.orange,jupiter_radius*0.035273879,\
                          vp.vector(0,-sun_radius+(-sun_radius*0.083249461),0))
-Venus = celestial_body(vp.color.purple,jupiter_radius*0.087490784,\
+Venus = CelestialBody(vp.color.purple,jupiter_radius*0.087490784,\
                        vp.vector(0,-sun_radius+(-sun_radius*0.155571531),0))
-Earth = celestial_body(vp.color.blue,jupiter_radius*0.09210241,\
+Earth = CelestialBody(vp.color.blue,jupiter_radius*0.09210241,\
                        vp.vector(0,-sun_radius+(-sun_radius*0.210783609),0))
-Mars = celestial_body(vp.color.red,jupiter_radius*0.048949735,\
+Mars = CelestialBody(vp.color.red,jupiter_radius*0.048949735,\
                        vp.vector(0,-sun_radius+(-sun_radius*0.32767793),0))
-Jupiter = celestial_body(vp.color.magenta,jupiter_radius,\
+Jupiter = CelestialBody(vp.color.magenta,jupiter_radius,\
                        vp.vector(0,-sun_radius+(-sun_radius*1.119338605),0))
-Saturn = celestial_body(vp.color.white,jupiter_radius*0.828589189,\
+Saturn = CelestialBody(vp.color.white,jupiter_radius*0.828589189,\
                        vp.vector(0,-sun_radius+(-sun_radius*2.060963336),0))
 ###############################################################################
 # Animation Stage
