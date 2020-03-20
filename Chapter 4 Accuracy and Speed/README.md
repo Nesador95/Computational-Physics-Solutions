@@ -1,4 +1,4 @@
-# Chapter 3: Graphics and visualization
+# Chapter 4: Accuracy and Speed
 
 ##### Exercise 4.1
 This program demonstrates the limitations of float number operations using factorials.
