@@ -43,7 +43,7 @@ Chapter 2 introduces different concepts of python programming from variable assi
 ### [Chapter 3: Graphics and visualization](https://github.com/Nesador95/Computational-Physics-Solutions/tree/master/Chapter%203%20Graphics%20Visualization%20Animation)
 Chapter 3 introduces methods of data visualization that include graphs, density plots 3-D visualization and Animation.
 
-### Chapter 4: Accuracy and speed
+### [Chapter 4: Accuracy and speed](https://github.com/Nesador95/Computational-Physics-Solutions/tree/master/Chapter%204%20Accuracy%20and%20Speed)
 Chapter 4 deals with the limitations of the computer. This chapter deals with methods to estimate the accuracy of calculations and how long it would take to compute solutions depending on the number of steps needed.
 
 ### [Chapter 5: Integrals and derivatives](https://github.com/Nesador95/Computational-Physics-Solutions/tree/master/Chapter%205%20Integrals%20and%20derivatives)
