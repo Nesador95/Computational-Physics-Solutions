@@ -14,6 +14,7 @@ class CelestialBody:
     def orbit(self, theta, delta_time):
             new_position = vp.vector(np.cos(theta), np.sin(theta),0)
             self.body.pos = self.body.pos + new_position* delta_time
+            
 caption = """This animation was intended to show how one may make 3-D models of physical events. 
 The model uses 2 different scales: the sun radius is taken as the unit vector of 10 lenght
 the orbits of the planets are then derived by dividing the radius of the real sun and the planet's orbit

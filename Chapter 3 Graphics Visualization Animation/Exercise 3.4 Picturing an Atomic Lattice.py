@@ -15,7 +15,7 @@ def sodium_chloride_lattice(lenght_of_side):
                     vp.sphere(pos=vp.vector(i,j,k), radius=R, color=vp.color.red)
                 count+=1     
 
-# sodium_chloride_lattice(5)
+sodium_chloride_lattice(5)
 
 # part b
 
@@ -29,4 +29,5 @@ def fcc_lattice(lenght_of_side):
                 vp.sphere(pos=vp.vector(i+0.5,j+0.5,k), radius=R, color=vp.color.purple)
                 vp.sphere(pos=vp.vector(i,j+0.5,k+0.5), radius=R, color=vp.color.purple)
                 vp.sphere(pos=vp.vector(i+0.5,j,k+0.5), radius=R, color=vp.color.purple)
- fcc_lattice(5)
+
+#fcc_lattice(5)
