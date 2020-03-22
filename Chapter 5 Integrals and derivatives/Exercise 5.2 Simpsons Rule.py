@@ -1,7 +1,7 @@
 #Not Done
 import numpy as np
 import matplotlib.pyplot as plt
-import Integration_Methods as IM 
+import IntegrationMethods as IM 
 
 class SimpsonsRuleIntegration:
 

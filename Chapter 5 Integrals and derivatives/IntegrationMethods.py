@@ -11,6 +11,10 @@ def equation(equation, variables):
 
     example:
     equation = equation("x**4 - 2*x +1" , ["x"])
+    
+    Note: 
+    - Does not interprete np.exp, write instead e
+    - Does not interprete 4**(-2), write instead 1/4**2
     """
     f = Expression(equation, variables)
     return f
@@ -112,3 +116,12 @@ class SimpsonsRuleIntegration:
         summation += summation_odd + summation_even
         summation *= (1/3) * width
         return summation
+
+###############################################################################
+# Testing area
+###############################################################################
+
+import parser as parser
+
+formula = "sin(x)*x**2"
+code = parser.expr(formula).compile()
