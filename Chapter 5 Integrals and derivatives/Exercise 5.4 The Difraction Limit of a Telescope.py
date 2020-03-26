@@ -1,13 +1,14 @@
-# Not Done 
+# Done 
 import numpy as np 
 import matplotlib.pyplot as plt 
-import IntegrationMethods as IM 
+import IntegrationMethods as IM
+
 
 ###############################################################################
 # Part a
 ###############################################################################
 
-x_list = np.linspace(0,20,21)
+x_list = np.linspace(0,20,100)
 
 # for J_0
 m = 0
@@ -44,15 +45,8 @@ plt.plot(x_list,J_0_values)
 plt.plot(x_list,J_1_values)
 plt.plot(x_list,J_2_values)
 ###############################################################################
-# Part b NOT FINISHED YET!!
+# Part b
 ###############################################################################
-
-
-def polar_plot_converter(r,theta_array):
-    # x and y transformations from polar to cartesian
-    x = r * np.cos(theta_array)
-    y = r * np.sin(theta_array)
-    return x, y
 
 
 def intensity_of_light_eq(J, wavelenght,r_of_focal_plane_to_diffract_pattern):
@@ -61,35 +55,31 @@ def intensity_of_light_eq(J, wavelenght,r_of_focal_plane_to_diffract_pattern):
     I_r = ((J*(k*r)) / (k*r))**2
     return I_r
 
+################# Grid maker for an image density plot ########################
 
-r_distance = np.linspace(0,1e-6,100)
-theta_steps = 100
-angles = np.linspace(0,2*np.pi,theta_steps)
+side = 2e-6 # Side of the Square from 0 to the number desired here
+points = 100 # Number of grid points along each side
+spacing = side/points # Spacing of points
 
-for_j0x = []
-for_j0y = []
+# calculating the position of the center(s) of the events
+separation = 0 # disntance from center
+x_event1 = side/2 + separation # x coordinates of event 1
+y_event1 = side/2 + separation # y coordinates of event 1
 
-for_j1x = []
-for_j1y = []
+# Array to store the height of each point
+final_grid = np.empty([points,points], float)
 
-for_j2x = []
-for_j2y = []
-
-m = 0
-for r in r_distance:
-    # calculating each point
-    for angle in angles:
-        x,y = polar_plot_converter(r, angle)
-        # calculating J on at each point
-
-        Equation = IM.equation("cos({0}*theta - {1}*sin(theta))".format(m,x), ["theta"])
+# calculation of the values in the array 
+for i in range(points):
+    y = spacing*i
+    for j in range(points):
+        x = spacing*j
+        # Below set up the mathematical expression to be calculated per point
+        # Remember to account for the position of the event's origin
+        Equation = IM.equation("cos({0}*theta - {1}*sin(theta))".format(0,np.sqrt((x-x_event1)**2 + (y-y_event1)**2)), ["theta"])
         value = IM.SimpsonsRuleIntegration().function_integration(Equation,0,np.pi,1000)
-        for_j0x.append(intensity_of_light_eq((1/np.pi)*value,500e-9,x))
-        for_j0y.append(intensity_of_light_eq((1/np.pi)*value,500e-9,y))
+        final_grid[i,j] = intensity_of_light_eq((1/np.pi)*value,500e-9,np.sqrt((x-x_event1)**2 + (y-y_event1)**2))
 
-
-    #for_j1.append(intensity_of_light_eq(J_1_values,500e-9,r))
-    #for_j2.append(intensity_of_light_eq(J_2_values,500e-9,r))
-
-j0 = [for_j0x, for_j0y] 
-plt.imshow(j0)
+# Making the plot
+plt.imshow(final_grid, origin="lower", extent=[0,side,0,side])
+plt.show()

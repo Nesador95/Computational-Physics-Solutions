@@ -8,7 +8,9 @@ Within the parameters of this method, one must provide the limits of integration
 ##### Exercise 5.2
 This program creates a version of Simpson's Rule of integration to compare its accuracy with that of the Trapezoidal/Trapezium integration method. (this program calls in the Integration_Method file to make use of the Trapezium integration method for comparizon.) This object for Simpson's rule behaves in an identical manner to `TrapesiumRuleIntegration`
 ##### Exercise 5.3
+This program calculates and plots the specified integral using Simpsons Rule
 ##### Exercise 5.4
+This program calculates the Bessel function as well as the intensity of light defraction pattern using Simpson's Rule, then creates a grid of values and these are then plotted using the value to image rendering tool `np.imshow()`.
 ##### Exercise 5.5
 ##### Exercise 5.6
 ##### Exercise 5.7
