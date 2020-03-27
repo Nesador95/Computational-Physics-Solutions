@@ -12,7 +12,9 @@ This program calculates and plots the specified integral using Simpsons Rule
 ##### Exercise 5.4
 This program calculates the Bessel function as well as the intensity of light defraction pattern using Simpson's Rule, then creates a grid of values and these are then plotted using the value to image rendering tool `np.imshow()`.
 ##### Exercise 5.5
+This is a pen and paper derivation of the Simpsons Rule error. Thus it is not featured here.
 ##### Exercise 5.6
+This program illustrateas a way to result of calculating the error from integration methods. most of the work was done on the file IntegrationMethods.py to make every object be able to calculate its own error. Note that this error is not the totality of the error in the calculation since rounding error also should be taken into account. The changes made for this exercise calculate the integration error only.
 ##### Exercise 5.7
 ##### Exercise 5.8
 ##### Exercise 5.9
@@ -40,8 +42,8 @@ It uses the external package "Equations" by glenfletcher, that can be found [her
 NOTE: The original versions for these integration methods only work in their respective files while the versions written in this file can be imported and used externally.
 
 Update: The objects housed in this file are:
-- `TrapesiumRuleIntegration`
-- `SimpsonsRuleIntegration`
+- `TrapesiumRuleIntegration`: Its maximum accuracy before rounding error is dominant is 10^8 slices.
+- `SimpsonsRuleIntegration`: Its maximum accuracy before rounding error is dominant is 10,000 slices.
 It also includes the global method `equation` which is used to house the functions before being pased to the integrating objects.
 
 
