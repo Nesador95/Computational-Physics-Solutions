@@ -143,7 +143,7 @@ class TrapeziumRuleIntegration:
         R_1_1 = self.function_integration(f,bound_a,bound_b,slices)
         I_i_1_less.append(R_1_1)
         print("=============================================")
-        print("Row/Number of Slices " + str(mth))
+        print("Row " + str(mth))
         print(I_i_1_less)
         # iteration of all the other rows of estimations
         while error_calculated > magnitude_of_tolerable_error:
@@ -157,7 +157,7 @@ class TrapeziumRuleIntegration:
                 I_i.append(R_i_m_plus_1)
                 error_calculated =abs( (1/(4**(m)-1)) * (I_i[-1] - I_i_1_less[m-2]) )
             I_i_1_less = I_i
-            print("Row/Number of Slices " + str(mth))
+            print("Row " + str(mth))
             print(I_i_1_less)
             print("Answer: " + str(I_i_1_less[-1]) + " Error at least: " + str(error_calculated))
         print("=============================================")
