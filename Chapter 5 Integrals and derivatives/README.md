@@ -16,7 +16,9 @@ This is a pen and paper derivation of the Simpsons Rule error. Thus it is not fe
 ##### Exercise 5.6
 This program illustrateas a way to result of calculating the error from integration methods. most of the work was done on the file IntegrationMethods.py to make every object be able to calculate its own error. Note that this error is not the totality of the error in the calculation since rounding error also should be taken into account. The changes made for this exercise calculate the integration error only.
 ##### Exercise 5.7
+This program makes use of an adaptive method of integration that has been built into the `TrapeziumRuleIntegration` object from the IntegrationMethods file in the form of the `adaptive_function_integration` method; as well as the `romberg_function_integration` method from the same object. It demonstrates how the Romberg integration method (an extension of the Trapezium method) becomes more accurate in smaller amount of slices than the regular Trapezium method, if and only if the function is well behaved.
 ##### Exercise 5.8
+This program is an extension of the provious one but instead it uses an adaptive method based on Simpson's Rule of integration. The amount of slices nessesary for this method falls in between Romberg and regular Trapezium. 
 ##### Exercise 5.9
 ##### Exercise 5.10
 ##### Exercise 5.11
@@ -35,15 +37,15 @@ This program illustrateas a way to result of calculating the error from integrat
 
 
 
-##### Integration_Methods
+##### IntegrationMethods
 I created this file to house the integration methods I code from the mathematical definitions found in the book.
 It uses the external package "Equations" by glenfletcher, that can be found [here](https://pypi.org/project/Equation/#description), to support the use of equations to be evaluated. 
 
 NOTE: The original versions for these integration methods only work in their respective files while the versions written in this file can be imported and used externally.
 
 Update: The objects housed in this file are:
-- `TrapesiumRuleIntegration`: Its maximum accuracy before rounding error is dominant is 10^8 slices.
-- `SimpsonsRuleIntegration`: Its maximum accuracy before rounding error is dominant is 10,000 slices.
+- `TrapesiumRuleIntegration`: Its maximum accuracy before rounding error is dominant is 10^8 slices. If the function is well behaved, the best estimates will be given by `romberg_function_integration`.
+- `SimpsonsRuleIntegration`: Its maximum accuracy before rounding error is dominant is 10,000 slices and requires an even number of slices.
 It also includes the global method `equation` which is used to house the functions before being pased to the integrating objects.
 
 
