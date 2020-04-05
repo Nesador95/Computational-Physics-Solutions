@@ -136,7 +136,7 @@ class TrapeziumRuleIntegration:
         """
         f = equation
         error_calculated = 100
-        slices = 1 # the num of slices
+        slices = 1 # the num of slices and also the row in Romberg triangle
         I_i_1_less = [] # the previous ith row of estimates (here the row is i = 1 but it updates)
         mth = 1 # number of estimations per row
         # first ith row
@@ -156,13 +156,11 @@ class TrapeziumRuleIntegration:
                 R_i_m_plus_1 = I_i[-1] + ((1/(4**(m)-1)) * (I_i[-1] - I_i_1_less[m-2]))
                 I_i.append(R_i_m_plus_1)
                 error_calculated =abs( (1/(4**(m)-1)) * (I_i[-1] - I_i_1_less[m-2]) )
-                if error_calculated < magnitude_of_tolerable_error:
-                    continue
             I_i_1_less = I_i
-            print("Row " + str(mth))
+            print("Row/Number of Slices " + str(mth))
             print(I_i_1_less)
             print("Answer: " + str(I_i_1_less[-1]) + " Error at least: " + str(error_calculated))
-            print("=============================================")
+        print("=============================================")
         return I_i_1_less[-1], error_calculated
 
 class SimpsonsRuleIntegration:
