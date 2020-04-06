@@ -143,7 +143,7 @@ class TrapeziumRuleIntegration:
         R_1_1 = self.function_integration(f,bound_a,bound_b,slices)
         I_i_1_less.append(R_1_1)
         print("=============================================")
-        print("Row " + str(mth))
+        print("Row " + str(mth) + " Amount of slices "+ str(slices))
         print(I_i_1_less)
         # iteration of all the other rows of estimations
         while error_calculated > magnitude_of_tolerable_error:
@@ -157,7 +157,7 @@ class TrapeziumRuleIntegration:
                 I_i.append(R_i_m_plus_1)
                 error_calculated =abs( (1/(4**(m)-1)) * (I_i[-1] - I_i_1_less[m-2]) )
             I_i_1_less = I_i
-            print("Row " + str(mth))
+            print("Row " + str(mth) + " Amount of slices "+ str(slices))
             print(I_i_1_less)
             print("Answer: " + str(I_i_1_less[-1]) + " Error at least: " + str(error_calculated))
         print("=============================================")
@@ -325,3 +325,73 @@ class SimpsonsRuleIntegration:
             error = (1/15) * (summation2 - summation1)
             return summation1, abs(error)
 
+class GaussianQuadrature:
+    """
+    Gaussian integration on N points gives exact answers 
+    for the integrals of polynomial functions up to and including
+    polynomials of degree=2N-1.  
+    """
+
+    def for_polynomial(self,degree):
+        """
+        Returns the optimal amount of points for a polynomial
+        """
+        return np.ceil((degree+1)/2)
+    
+    def gaussxw(self,N_points):
+        """
+        Calculates the sample points and their weights for 
+        gaussian integration.
+
+        Avoid calling this function many times to avoid slowing down 
+        your calculation. For many integrals over different domains
+        of integration, call this method once to calculate 
+        the sample points.
+
+
+        Written by Mark Newman <mejn@umich.edu>, June 4, 2011.
+        Used here with his permission.
+        """
+        N = N_points
+        # Initial approximation to roots of the Legendre polynomial
+        a = np.linspace(3,4*N-1,N)/(4*N+2)
+        x = np.cos(np.pi*a+1/(8*N*N*np.tan(a)))
+
+        # Find roots using Newton's method
+        epsilon = 1e-15
+        delta = 1.0
+        while delta>epsilon:
+            p0 = np.ones(N,float)
+            p1 = np.copy(x)
+            for k in range(1,N):
+                p0,p1 = p1,((2*k+1)*x*p1-k*p0)/(k+1)
+            dp = (N+1)*(p0-x*p1)/(1-x*x)
+            dx = p1/dp
+            x -= dx
+            delta = max(abs(dx))
+
+        # Calculate the weights
+        w = 2*(N+1)*(N+1)/(N*N*(1-x*x)*dp*dp)
+
+        return x,w
+    
+    def apply_integration(self,equation, bound_a, bound_b, points_x, points_weights_w):
+        """
+        applies the Gaussian Quadrature integration method to the function
+        specified. Requires points_x and points_weights_w that can be obtained from 
+        the method 'gaussxw' 
+        """
+        f = equation
+
+        # Setting up the points for the integration
+        x = points_x
+        w = points_weights_w
+        a = bound_a
+        b = bound_b
+        xp,wp = 0.5*(b-a)*x+0.5*(b+a),0.5*(b-a)*w
+
+        # Performance of the integration
+        solution = 0.0
+        for k in range(len(x)):
+            solution += wp[k]*f(xp[k])
+        return solution
