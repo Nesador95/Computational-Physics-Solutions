@@ -20,6 +20,7 @@ This program makes use of an adaptive method of integration that has been built 
 ##### Exercise 5.8
 This program is an extension of the provious one but instead it uses an adaptive method based on Simpson's Rule of integration. The amount of slices nessesary for this method falls in between Romberg and regular Trapezium. 
 ##### Exercise 5.9
+This program makes use of the Gaussian Quadrature integration method to calculate the heat capacity of a solid and makes a graph of the heat capacity change from 5 to 500 kelvin.
 ##### Exercise 5.10
 ##### Exercise 5.11
 ##### Exercise 5.12
@@ -46,6 +47,8 @@ NOTE: The original versions for these integration methods only work in their res
 Update: The objects housed in this file are:
 - `TrapesiumRuleIntegration`: Its maximum accuracy before rounding error is dominant is 10^8 slices. If the function is well behaved, the best estimates will be given by `romberg_function_integration`.
 - `SimpsonsRuleIntegration`: Its maximum accuracy before rounding error is dominant is 10,000 slices and requires an even number of slices.
+- `GaussianQuadrature`: it can estimate polynomial exactly and can have really good estimates quickly with a small amount of points of integration, it is especially useful when calculating an answer and cannot afford to use large numbers of points. It cannot be used for adaptive integration due to its nature of having non-uniform weighted points as the bases for the aproximation.
+
 It also includes the global method `equation` which is used to house the functions before being pased to the integrating objects.
 
 
