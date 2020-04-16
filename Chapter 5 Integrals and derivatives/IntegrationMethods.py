@@ -1,6 +1,12 @@
 import numpy as np
 from Equation import Expression
-
+###############################################################################
+"""
+This module has been depricated see integralsderivatives for the new 
+module.
+"""
+###############################################################################
+# Refactored
 def equation(equation, variables):
     """
     Note: This requires that you install the package Equation:
@@ -16,10 +22,32 @@ def equation(equation, variables):
     Note: 
     - Does not interprete np.exp, write instead e
     - Does not interprete 4**(-2), write instead 1/4**2
+
+    ===============
+    When integrating over infinite ranges, there is a few 
+    ways to set the equation:
+
+    from 0 to inf:
+    x = z/(1-z)
+    dx = 1/(1-z)^2
+    integral from 0 to 1
+
+    from non-zero value a to inf:
+    x = z/(1-z) + a
+    dx = 1/(1-z)^2
+    integral from 0 to 1
+    Note: for integral from -inf to a, substitue z for -z
+
+    from -inf to inf:
+    x = tan(z)
+    z = cos(z)^2
+    integral from -pi/2 to pi/2
+    ===============
+
     """
     f = Expression(equation, variables)
     return f
-
+# Refactored
 class TrapeziumRuleIntegration:
     """
     This object takes the integral of a function or a set of data
@@ -28,7 +56,7 @@ class TrapeziumRuleIntegration:
     derivation of this method can be found in section 5.1.1 The Trapezoidal Rule
     from 'Computation Physics' by Mark Newman 
     """
-
+    # Refactored
     def function_integration(self,equation, bound_a, bound_b, num_slices, error=False):
         """    
         To use this method, define the equation first with
@@ -71,7 +99,7 @@ class TrapeziumRuleIntegration:
 
             error = (1/3) * (summation2-summation1)
             return summation1, abs(error)
-
+    # Refactored
     def adaptive_function_integration(self,equation, bound_a, bound_b, magnitude_of_tolerable_error):
         """
         This methods does the integration of a function and estimates the nessesary slices for the 
@@ -95,7 +123,7 @@ class TrapeziumRuleIntegration:
             I_i_1_less = I_i
         print("=============================================")
         return I_i, error_calculated
-    
+    # Refactored
     def data_integration(self, data, error=False):
         """
         To use the data_integration method, one must provide the data in an array form.
@@ -125,7 +153,7 @@ class TrapeziumRuleIntegration:
             summation2 *= width
             error = (1/3) * (summation2 - summation1)
             return summation1, abs(error)
-
+    # Refactored
     def romberg_function_integration(self,equation, bound_a, bound_b, magnitude_of_tolerable_error):
         """
         This methods does the integration of a function and estimates the nessesary slices for the 
@@ -395,3 +423,22 @@ class GaussianQuadrature:
         for k in range(len(x)):
             solution += wp[k]*f(xp[k])
         return solution
+
+###############################################################################
+# Testing Area
+###############################################################################
+
+import integralsandderivatives as iad
+
+I_i=[5,6]
+I_i_1_less = [8]
+print(I_i.index(I_i[-2]))
+print(I_i_1_less[I_i.index(I_i[-2])])
+
+integral_without_error = iad.TrapesoidalRule("x**4 - 2*x +1",["x"],0,2).function_integration(num_slices=100)
+integral_with_error = iad.TrapesoidalRule("x**4 - 2*x +1",["x"],0,2).function_integration(adaptive_method=True,magnitude_of_tolerable_error=10e-6)
+integral_with_romberg = iad.TrapesoidalRule("x**4 - 2*x +1",["x"],0,2).function_integration(romberg_method=True,magnitude_of_tolerable_error=10e-6)
+print(integral_with_error)
+print(integral_without_error)
+print(integral_with_romberg)
+
