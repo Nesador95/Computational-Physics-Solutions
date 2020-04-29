@@ -352,7 +352,7 @@ class SimpsonsRuleIntegration:
 
             error = (1/15) * (summation2 - summation1)
             return summation1, abs(error)
-
+# Refactored
 class GaussianQuadrature:
     """
     Gaussian integration on N points gives exact answers 

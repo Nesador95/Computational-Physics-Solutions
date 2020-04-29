@@ -22,9 +22,16 @@ This program is an extension of the provious one but instead it uses an adaptive
 ##### Exercise 5.9
 This program makes use of the Gaussian Quadrature integration method to calculate the heat capacity of a solid and makes a graph of the heat capacity change from 5 to 500 kelvin.
 ##### Exercise 5.10
+This program solves the period for an enharmonic oscilator. it uses the gaussian quadrature method and graphs it.
 ##### Exercise 5.11
+This program solves for the intensity of a wave after it has passed a corner and it has been changed. It uses a gaussian quadrature to calculate it before graphing it.
 ##### Exercise 5.12
+The program solves for the radiation per unit area by a black body and it uses the gaussian quadrature to solve. once this is done, the solution is checked by calculating the Stefan Boltzmann constant and judge the accuracy of the program and the method.
 ##### Exercise 5.13
+This program calculates solutions to the the quantum well problem and graphs them. The way this program goes about calculating using regression is not optimal and could be improved. It also shows at this point and time the limitations of my personal library `IntegrationMethods` since it cannot take in functions such as `quatum_well()` as it is nessesary for this type of problems.
+
+### Disclaimer
+The Exercises remaining in this chapter have been put on hold. It has become obvious to me that `IntegrationMethods` is in need of being refactored and re-writen, and I will take the opportunity to add the possibility of being able to do multi-variable integrals as well as derivatives. Since this will take a while, (and it has taken a while) I have decided to revisit this section later on. As of this writing, the new file housing the integration objects and future derivation objects will be `integralsandderivatives`. 
 ##### Exercise 5.14
 ##### Exercise 5.15
 ##### Exercise 5.16

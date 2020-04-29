@@ -52,9 +52,10 @@ plt.plot(x_values,n_solution_30)
 ###############################################################################
 # part c
 ###############################################################################
-# can't use my IntegrationMethods file properly since the library Equation
+# can't use my IntegrationMethods file properly.
 # does not support the feature I need to use funtions inside equations.
 # Below I explicitly used Gaussian Quadrature. 
+# I will refactor this library for future problems
 
 # integral set up
 n = 5
