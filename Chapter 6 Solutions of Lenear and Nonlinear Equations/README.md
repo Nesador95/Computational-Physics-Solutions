@@ -8,6 +8,7 @@ This program takes in a matrix that needs to be pivoted in order to be able to s
 ##### Exercise 6.4
 ##### Exercise 6.5
 ##### Exercise 6.6
+This program uses `banded.py`, a program provided by the author to solve banded matrices, to animate a three dimentional representation of vibration in a one dimentional system.
 ##### Exercise 6.7
 ##### Exercise 6.8
 ##### Exercise 6.9
