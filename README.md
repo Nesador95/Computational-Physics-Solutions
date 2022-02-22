@@ -1,5 +1,5 @@
 ##### 02/21/2022 Note: This project started when I was a Physics undergraduate student employed as a Computational Physics lab TA at the University of Tampa. It has become part of my portfolio to showcase my computational physics, mathematical modeling, and Python programming skills ever since, I will update this project every now and then when I get the chance. 
-- If you are looking for examples of my work in data science, data analytics, machine learning, and/or statistical inference go to my Kaggle profile [here](https://www.kaggle.com/lfelipe95/code) 
+- If you are looking for examples of my work with statistical inference or ML go to my Kaggle profile [here](https://www.kaggle.com/lfelipe95/code) 
 - If you are a physics student going through the book and want to use my code as reference or for guidance please make sure you cite this resource, don't be the person that is caught plagiarizing! This is a free resource, so if you can find it, chances are your professor can too! Good luck with your studies :)
 # Computational Physics Solutions
 #### Book by Mark Newman  
